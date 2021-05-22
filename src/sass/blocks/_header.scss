@@ -1,0 +1,37 @@
+.header{ 
+    min-height: 100vh;
+    padding: 205px 0 0px;
+    position: relative;
+    background: url('../img/main_bg.jpg') no-repeat 50%/cover;
+    &__title{
+        margin-top: 9px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 60px;
+    }
+    &__wrapper{
+        width: 532px;
+        padding: 11px 0 20px 18px;
+        position: relative;
+    }
+    &__btns{
+        margin-top: 25px;
+        max-width: 248px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 135px;
+        height: 45px;
+        cursor: pointer;
+        &:hover{
+            text-decoration: none;
+            color: darken($accent-color, 15%);
+        }
+    }
+
+}

@@ -1,0 +1,38 @@
+//- Block about-section
+mixin block(subtitle, descr, icon)
+    .block
+        div
+            .icon(class = "about__" + icon)
+        div
+            .about__subtitle.subtitle=subtitle
+            .descr=descr
+
+//- Block experince-section
+mixin exp-block(subtitle, lesser, descr, icon)
+    .block.experince__block
+        .icon.experince__icon(class = "experince__" + icon)
+        .expirence__subtitle.subtitle=subtitle
+            .lesser-subtitle.experince__lesser=lesser
+        .descr.experince__descr=descr
+
+//-Block skills-section
+mixin skills-block(subtitle, descr, icon)
+    .skills__block
+        .skills__content
+            .skills__icon(class = "skills__" + icon)
+            .skills__subtitle.subtitle=subtitle
+            .skills__descr.descr=descr
+        
+
+mixin range(subtitle, count, style)
+    .skills__item
+        .skills__sub-range.subtitle=subtitle
+        .skills__count#range-count=count 
+        .skills__range-line
+            span(style = style)
+//-Block price-section
+mixin price-list(subtitle, lesser,text)
+    .price__item
+        .subtitle.price__subtitle=subtitle
+        .price__lesser.subtitle=lesser
+        .price__amount.lesser-subtitle=text

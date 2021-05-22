@@ -1,0 +1,92 @@
+.title-wrapper_center{
+    margin: 0 auto;
+    text-align: center;
+    .up-title{
+        &::before{
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+.up-title{
+    font-weight: 700;
+    font-size: 16px;
+    color: $text-color;
+    position: relative;
+    z-index: 1;
+    @include marker-dot;
+}
+.title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 60px;
+    color:$text-color;
+}
+.subtitle{
+    font-size: 14px;
+    line-height: 21px;
+    color:$text-color;
+    font-weight: 700;
+}
+.line{
+    width: 60px;
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+    margin: 25px auto 0 auto;
+
+}
+.desc{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $text-color;
+}
+
+.block{
+    padding-top: 6px;
+    display: grid;
+    position: relative;
+    grid-template-columns:  40px 220px;
+    gap: 0 20px;
+}
+.icon{
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 23.45px;
+    top: 15px;
+    left: 5px;
+
+}
+.descr{
+    margin-top: 6px;
+    font-size: 12px;
+}
+.btn{
+    display: block;
+    width: 135px;
+    height: 45px;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    color: $text-color;
+    font-weight: 700;
+    transition: 0.5s ease-out all;
+    position: relative;
+    padding: 12px 26px;
+    &:hover{
+        background-image: linear-gradient(to left, #ffa501, #fbb200, #f7c003, #f1cc12, #ebd922);
+        box-shadow: 5px 6px 8px 3px rgba(15, 15, 15, 0.24);
+    }
+}
+.social{
+    transition: 0.8s all ease-in-out;
+    &__link{        
+        @include hoverEffect
+    }    
+}
+.lesser-subtitle{
+    font-weight: 500;
+    font-size: 12px;
+}

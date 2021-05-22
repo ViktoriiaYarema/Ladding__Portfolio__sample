@@ -1,0 +1,34 @@
+section.contacts 
+    .container 
+        .contacts__wrapper
+            .contacts__photo
+                img(src="img/main_photo.jpg", alt="Photo")
+            .contacts__content
+                .up-title Контакты
+                h2.title Свяжитесь со мной
+                .line.contacts__line
+                .contacts__subtitle.subtitle Любым удобным для вас способом:
+                .contacts__media.contacts__media_footer
+                    a(href="https://www.facebook.com/")
+                        img(src="icons/social/facebook.svg", alt="facebook")
+                    a(href="https://www.facebook.com/")
+                        img(src="icons/social/telegram.svg", alt="telegram")
+                    a(href="https://www.facebook.com/")
+                        img(src="icons/social/instagram.svg", alt="instagram")
+                .contacts__subtitle.subtitle Или оставьте ваши данные и я сама вам напишу:
+                form.contacts__form(action="")
+                    .contacts__input
+                        input(required type="text" id = 'name' name = 'name')
+                        label.contacts__label(for="name") Ваше имя
+                    .contacts__input
+                        input(required type="email" id = 'email' name = 'email')
+                        label.contacts__label(for="email") Ваша почта
+                    div.contacts__message
+                        textarea(name="text", cols="30", rows="10")( id ='textarea')
+                        label.contacts__label(for="textarea") Ваше сообщение
+                    button.btn.contacts__btn Отправить сообщение
+                    div.contacts__policy-wrapp 
+                        input(required type="checkbox" class = "contacts__checked")
+                        span.contacts__policy Я принимаю 
+                            a(href="#") политику конфиденциальности
+

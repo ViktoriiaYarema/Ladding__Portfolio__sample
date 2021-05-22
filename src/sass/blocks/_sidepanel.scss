@@ -1,0 +1,35 @@
+.sidepanel{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 226px;
+    left: -50px;
+    transform: rotate(-90deg) translate(-54%, -30%);
+    z-index: 3;
+    &__title{
+        font-size: 16px;
+    }
+    &__line{
+        display: block;
+        width: 70px;
+        background-color: black;
+        height: 2px;
+        margin: 0px 15px;
+    }
+    &__social{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        transform: rotate(90deg);
+        margin-left: 42px;
+    }
+    &__link{
+        transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+        &:nth-child(2){
+            margin: 15px 0;
+        }
+    @include hoverEffect
+
+    }
+}

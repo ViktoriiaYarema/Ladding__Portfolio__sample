@@ -1,0 +1,50 @@
+.about{
+    padding: 120px 0;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 70px;
+    }
+    &__line{
+        margin: 0;
+    }
+    &__content{
+        padding-top: 6px;
+    }
+    &__desc{
+       margin-top: 20px; 
+    }    
+    &__tips{
+        display: grid;
+        position: relative;
+        margin-top: 40px;
+        grid-template: repeat(2, minmax(115px, auto)) / repeat(2, minmax(auto,260px));
+        grid-auto-rows: 1fr;
+        gap: 20px 50px;
+    }
+    &__subtitle{
+        @include marker-dot;
+        &::before{
+            top: 6px;
+        }
+    }
+    &__photo{
+        grid-row: 1/3;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__web{
+        background: url('../icons/about_me/web_development.svg') no-repeat;
+    }
+    &__app{
+        background: url('../icons/about_me/mobile_dev.svg') no-repeat;
+        height: 100%;
+    }
+    &__design{
+        background: url('../icons/about_me/design.svg') no-repeat;
+    }
+
+}

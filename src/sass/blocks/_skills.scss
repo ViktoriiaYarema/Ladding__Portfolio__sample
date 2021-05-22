@@ -1,0 +1,88 @@
+.skills{
+    padding-top: 120px;
+    &__wrapper{
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 13px;        
+    }
+    &__block{
+        width: 270px;
+        height: 270px;
+        border: 1px solid #000;
+     }
+    &__content{
+        padding: 30px;
+    }
+    &__icon{
+        width: 100%;
+        height: 65px;
+
+    }
+    &__html{
+        background: url('../icons/skills/html5.svg') no-repeat;
+    }
+    &__css{
+        background: url('../icons/skills/css3.svg') no-repeat;
+    }
+    &__js{
+        background: url('../icons/skills/js.svg') no-repeat;
+    }
+    &__jquery{
+        background: url('../icons/skills/jquery.svg') no-repeat;
+    }
+    &__react{
+        background: url('../icons/skills/react.svg') no-repeat;
+    }
+    &__node{
+        background: url('../icons/skills/node.js.svg') no-repeat;
+    }
+    &__mongo{
+        background: url('../icons/skills/mongo.db.svg') no-repeat;
+    }
+    &__subtitle{
+        margin-top: 20px;
+    }
+    &____descr{
+        margin-top: 15px;
+    }
+
+    &__range{
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 40px;
+        
+    }
+    &__range-line{
+        grid-column: 1/3;
+        height: 14px;
+        background-color: #E8E4DE;
+        span {
+            display: block;
+            height: 100%;
+            background-color: $accent-color;
+            border-radius: 4px;
+        }
+    }
+    &__count{
+        padding-top: 15px;     
+    }
+    &__sub-range{
+        margin: 0;
+        align-self: center;
+        position: relative;
+        @include marker-dot;
+        &::before{
+            @include position-begin;
+        }
+    }
+    &__item{
+        display: grid;
+        grid-template-columns: 1fr 40px;
+        height: 80px;
+        align-content: space-between;
+        
+        
+    }
+}

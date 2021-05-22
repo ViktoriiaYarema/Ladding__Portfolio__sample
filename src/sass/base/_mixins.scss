@@ -1,0 +1,46 @@
+
+@mixin position-begin {
+    top: -6px;
+    left: -10px;
+}
+@mixin position-center{
+    left: 50px;
+    transform: translateX(-50deg);
+}
+
+@mixin marker-dot{
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -3;
+        width: 36px;
+        height: 36px;
+        background-color: $accent-color;
+        border-radius: 100%;
+        @include position-begin;
+    }
+}
+
+@mixin hoverEffect {
+    &:hover {
+        box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+        transform: scale(1.2);
+    }
+}
+
+@mixin dot {
+    &::before{
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background-color: $accent-color;
+        position: absolute;
+        top: 2px;
+        z-index: 50;
+        left: -7px;
+    }
+}
+

@@ -1,0 +1,114 @@
+.nav{
+    position: absolute;
+    top: 4%;
+    left: 95%;    
+    z-index: 3;
+    cursor: pointer;
+}
+.hamburger{
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: 0.5s all ease-out;
+    span{
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #151812;
+        }
+    &:hover{
+        span.middle{
+            width: 36px;
+        }
+    }
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.8s all ease-in;
+    height: 100vh;
+    &__overlay{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255,255,255,.75);
+        opacity: 0.75;
+        z-index: -2;        
+    }
+    &__option{
+        width: 30vw;
+        height: 100vh;
+        background-color: $accent-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 50px;
+
+    }
+    &__close{
+        align-self: flex-end;
+        margin: 25px;
+        cursor: pointer;
+        transition: .4s all ease-in;
+        &:hover{
+            transform: rotate(90deg);
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 286px;
+        list-style-type: none;
+        
+    }
+    &__link {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        color: #fff;
+        text-transform: uppercase;
+        position: relative;
+        transition: 0.2s all ease-in;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 28%;
+            left: -30px;
+            width: 15px;
+            height: 15px;   
+            border-radius: 100%;
+            border: 1px solid #000000;
+        }
+        a{
+            color: #fff;
+            &:hover{
+                text-decoration: none;
+                transform: scale(1.2);
+                color: $text-color;
+            }
+        }  
+        &:hover{
+            transform: scale(1.2);
+        }      
+    }   
+    &__media{
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 33%;
+    }
+}
+.active{
+    left: 0;
+    visibility: visible;
+    opacity: 1; 
+}
